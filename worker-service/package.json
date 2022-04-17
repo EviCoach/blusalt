@@ -1,0 +1,32 @@
+{
+  "name": "worker-service",
+  "version": "1.0.0",
+  "description": "Worker Service",
+  "main": "app.js",
+  "scripts": {
+    "start": "DEBUG=* & node app.js",
+    "dev": "DEBUG=* & nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EviCoach/blu-worker-service.git"
+  },
+  "keywords": [
+    "Worker"
+  ],
+  "author": "Evi Owhotemu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EviCoach/blu-worker-service/issues"
+  },
+  "homepage": "https://github.com/EviCoach/blu-worker-service#readme",
+  "dependencies": {
+    "amqp-library": "^1.1.5",
+    "amqplib": "^0.8.0",
+    "axios": "^0.26.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.3.0"
+  }
+}

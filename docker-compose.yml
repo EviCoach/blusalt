@@ -1,0 +1,73 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_USER: blusalt
+      POSTGRES_PASSWORD: blusalt
+      POSTGRES_DB: blusalt
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3-management-alpine
+    command: rabbitmq-server
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      interval: 5s
+      timeout: 15s
+      retries: 1
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  billing-service:
+    build: ./billing-service
+    restart: on-failure
+    ports:
+      - '5001:5001'
+    volumes:
+      - logs:/app/logs
+      - ./billing-service:/app
+      - /app/node_modules
+    env_file:
+      - ./env/billing_service.env
+    depends_on:
+      - rabbitmq
+      - db
+  worker-service:
+    build: ./worker-service
+    restart: on-failure
+    ports:
+      - '5003:5003'
+    volumes:
+      - logs:/app/logs
+      - ./worker-service:/app
+      - /app/node_modules
+    env_file:
+      - ./env/worker_service.env
+    depends_on:
+      - billing-service
+      - rabbitmq
+      - db
+  customer-service:
+    build: ./customer-service
+    restart: on-failure
+    ports:
+      - '5000:5000'
+    volumes:
+      - logs:/app/logs
+      - ./customer-service:/app
+      - /app/node_modules
+    env_file:
+      - ./env/customer_service.env
+    depends_on:
+      - billing-service
+      - rabbitmq
+volumes:
+  pgdata:
+  logs:
