@@ -1,5 +1,4 @@
 const express = require("express");
-const { sequelize } = require("./models");
 const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -21,11 +20,13 @@ app.use((err, req, res, next) => {
         res.status(err.status || Http.InternalServerError).json({ error: err.message || "Internal server error" });
     }
 });
-app.listen(PORT, async () => {
-    await authenticateDB();
-    console.log(`Server listening on port ${PORT}`);
-});
+// app.listen(PORT, async () => {
+//     await authenticateDB();
+//     console.log(`Server listening on port ${PORT}`);
+// });
 
-async function authenticateDB() {
-    await sequelize.authenticate();
-}
+// async function authenticateDB() {
+//     await sequelize.authenticate();
+// }
+
+module.exports = app;

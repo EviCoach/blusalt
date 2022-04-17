@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 5003
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "bin/www" ]

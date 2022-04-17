@@ -2,11 +2,11 @@
   "name": "worker-service",
   "version": "1.0.0",
   "description": "Worker Service",
-  "main": "app.js",
+  "main": "bin/www",
   "scripts": {
-    "start": "DEBUG=* & node app.js",
-    "dev": "DEBUG=* & nodemon app.js",
-    "test": "jest"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

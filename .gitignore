@@ -1,3 +1,7 @@
 billing-service/node_modules
 customer-service/node_modules
 worker-service/node_modules
+
+billing-service/.env
+customer-service/.env
+worker-service/.env
