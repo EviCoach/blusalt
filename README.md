@@ -38,3 +38,5 @@ to run the migrations and seeders. Run ```npm start``` to start each service
 ### MIGRATE AND SEED DATABASE
 Command to run database migrations and seeding the database are in ```entrypoint.sh``` file
 this file is run automatically when you run the command ```docker-compose up --build```
+
+#### POSTMAN API DOCUMENTATION
