@@ -7,7 +7,7 @@
    Customers can fund their account with the /api/v1/customers/funds endpoint, this takes a payload the has an amount, this specify how much
    they want to top up.
    The topup is sent as a REST API request to the ```billing-service```.
-   The ```billing-serivice``` will validate the payload and create a ```transaction``` with a status of ```pending`` from the payload.
+   The ```billing-serivice``` will validate the payload and create a ```transaction``` with a status of ```pending``` from the payload.
    This ```transaction``` is saved in the database and also published through a rabbitmq queue.
 
 ## SEED DATABASE IN DOCKER-COMPOSE
