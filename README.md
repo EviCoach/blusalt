@@ -35,7 +35,6 @@
      run ```npm start```
 ### HOW TO SETUP THE PROJECT WITH DOCKER
 Clone the project and run ```docker-compose up --build```
-### Seed the database before testing
 
 ### MIGRATE AND SEED DATABASE
 Command to run database migrations and seeding the database are in ```entrypoint.sh``` file
