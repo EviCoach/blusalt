@@ -21,7 +21,7 @@
     The ```billing-service``` picks up the updated transaction and updates its record in the database.
     It then notifies the ```customer-service``` through a webhook about the status of the ```transaction```\
     \
-    The ```customer-service``` checks the status and type of the transaction and updates both the customer's ```balance``` and usable balance ```ubalance```
+    The ```customer-service``` checks the status and type of the transaction and updates both the customer's ```balance``` and usable balance ```ubalance```\
 ### HOW TO SETUP THE PROJECT WITHOUT DOCKER
     Clone the project
     Navigate into each service folder
