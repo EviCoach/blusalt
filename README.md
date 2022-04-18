@@ -23,16 +23,16 @@
     \
     The ```customer-service``` checks the status and type of the transaction and updates both the customer's ```balance``` and usable balance ```ubalance```
 ### HOW TO SETUP THE PROJECT WITHOUT DOCKER
-    + Clone the project
-    + Navigate into each service folder
-    + and run npm install
-    + Run
+    * Clone the project
+    * Navigate into each service folder
+    * and run npm install
+    * Run
             ```
                 npx sequelize db:migrate
                 npx sequelize db:seed:all
             ```\
             to run the migrations and seeders
-    + run ```npm start```
+    * run ```npm start```
 ### HOW TO SETUP THE PROJECT WITH DOCKER
 ### Seed the database before testing
 
