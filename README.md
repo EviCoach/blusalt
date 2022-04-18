@@ -40,3 +40,5 @@ Command to run database migrations and seeding the database are in ```entrypoint
 this file is run automatically when you run the command ```docker-compose up --build```
 
 #### POSTMAN API DOCUMENTATION
+[POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/5870422/Uyr5pzx2)\
+https://documenter.getpostman.com/view/5870422/Uyr5pzx2
