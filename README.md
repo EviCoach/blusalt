@@ -34,6 +34,7 @@
             to run the migrations and seeders
      run ```npm start```
 ### HOW TO SETUP THE PROJECT WITH DOCKER
+Clone the project and run ```docker-compose up --build```
 ### Seed the database before testing
 
 ### MIGRATE AND SEED DATABASE
