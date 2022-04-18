@@ -1,4 +1,3 @@
-# npm install
 npx sequelize db:migrate
+npx sequelize db:seed:all
 npm start
-# npm run dev

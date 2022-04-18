@@ -6,6 +6,7 @@
 const app = require("../app")
 const cluster = require("cluster")
 const { Worker } = require("worker_threads")
+require("../startups");
 let workers = []
 let numCores = require("os").cpus().length
 
