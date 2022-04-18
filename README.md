@@ -32,10 +32,10 @@ Clone the project
 Navigate into each service folder
 and run npm install
 Run
-            ```
-                npx sequelize db:migrate
-                npx sequelize db:seed:all
-            ```\
+    ```
+        npx sequelize db:migrate
+        npx sequelize db:seed:all
+   ```\
 to run the migrations and seeders
 run ```npm start```
 
