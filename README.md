@@ -15,7 +15,10 @@
     \
     Using a queue and Postgres database makes each transaction atomic.
     Each transaction is queued and consumed one at a time
-    and processing one transaction does not affect the other. \
+    and processing one transaction does not affect the other.
+    \
+    The updated transaction is published back to the queue on a channel that ```billing-service``` listens to.
+    The ```billing-service``` picks up the updated transaction and updates its record in the database.
 
 ### Seed the database before testing
 
