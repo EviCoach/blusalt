@@ -14,7 +14,7 @@
     to ```success```.
 
     using a queue and Postgres database makes each transaction atomic.
-     Each transaction is queued and consumed
+    Each transaction is queued and consumed
     one at a time and processing one transaction does not affect the other. 
 
 ## SEED THE DATABASE BEFORE TESTING
