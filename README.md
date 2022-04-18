@@ -19,6 +19,7 @@
     \
     The updated transaction is published back to the queue on a channel that ```billing-service``` listens to.
     The ```billing-service``` picks up the updated transaction and updates its record in the database.
+    It then notifies the ```customer-service``` through a webhook about the status of the ```transaction```
 
 ### Seed the database before testing
 
