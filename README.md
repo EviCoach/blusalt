@@ -13,7 +13,7 @@
     The charge waits for 100ms and processes the request, that is, updates the status of the transaction from ```pending```
     to ```success```.
 
-    #### using a queue and Postgres database makes each transaction atomic. Each transaction is queue and consumed
+    using a queue and Postgres database makes each transaction atomic. Each transaction is queue and consumed
     one at a time and processing one transaction does not affect the other. 
 
 ## SEED THE DATABASE BEFORE TESTING
