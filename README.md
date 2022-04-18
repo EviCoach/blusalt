@@ -10,10 +10,6 @@
    The ```billing-serivice``` will validate the payload and create a ```transaction``` with a status of ```pending``` from the payload.
    This ```transaction``` is saved in the database and also published through a rabbitmq queue.
 
-## SEED DATABASE IN DOCKER-COMPOSE
-just run docker-compose run --rm app npx sequelize-cli db:migrate
-
-or... if you have the service already running, you could simply login to the container (docker-compose exec app bash) and run the command inside your running container (npx sequelize-cli db:migrate)
 
 ## SEED THE DATABASE BEFORE TESTING
 
