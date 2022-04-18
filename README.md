@@ -30,9 +30,10 @@ Clone the project and run ```docker-compose up --build```
 ### HOW TO SETUP THE PROJECT WITHOUT DOCKER
 Clone the project
 Navigate into each service folder
-and run npm ```install```
+and run ```npm install```
 
-run ```npm start```
+Run ```npx sequelize db:migrate``` and  ```npx sequelize db:seed:all```
+to run the migrations and seeders. Run ```npm start``` to start each service
 
 ### MIGRATE AND SEED DATABASE
 Command to run database migrations and seeding the database are in ```entrypoint.sh``` file
