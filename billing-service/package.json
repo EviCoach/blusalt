@@ -2,11 +2,11 @@
   "name": "billing-service",
   "version": "1.0.0",
   "description": "Billing Service",
-  "main": "app.js",
+  "main": "bin/www",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "test": "jest"
+    "start": "node bin/www",
+    "dev": "nodemon bin/www",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

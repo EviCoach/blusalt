@@ -114,8 +114,6 @@ function onError(error, port) {
     }
 }
 
-//Digital only
-
 if (process.env.NODE_ENV == "production") {
     if (numCores > 1) {
         setupServer(true)

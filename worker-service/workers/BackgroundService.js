@@ -4,7 +4,6 @@ const { QUEUE, STATUS, RABBITMQ_URL } = require("../config/constants");
 let connection;
 const init = async () => {
     try {
-        console.log("Rabbitmq url: ", RABBITMQ_URL);
         connection = await amqp.connect(RABBITMQ_URL);
         console.info("Queue connected");
         receiveMessage(connection);
@@ -19,7 +18,6 @@ const receiveMessage = async (connection) => {
     if (!connection) {
         connection = init();
     }
-    console.log("Consume message...");
     const channel = await connection.createChannel();
     channel.assertQueue(QUEUE.TRANSACTION_QUEUE, { durable: true });
     channel.consume(QUEUE.TRANSACTION_QUEUE, message => {

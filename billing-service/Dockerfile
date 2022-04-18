@@ -18,4 +18,4 @@ ENTRYPOINT [ "bash", "entrypoint.sh" ]
 
 EXPOSE 5001
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "bin/www" ]
