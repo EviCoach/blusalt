@@ -17,7 +17,7 @@
     Each transaction is queued and consumed one at a time
     and processing one transaction does not affect the other. 
 
-### SEED THE DATABASE BEFORE TESTING
+### Seed the database before testing
 
 ### MIGRATE AND SEED DATABASE
 Command to run database migrations and seeding the database are in "entrypoint.sh" file
