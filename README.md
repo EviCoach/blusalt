@@ -10,6 +10,9 @@
    The ```billing-serivice``` will validate the payload and create a ```transaction``` with a status of ```pending``` from the payload.
    This ```transaction``` is saved in the database and also published through a rabbitmq queue.
 
+    The ```worker-service``` listens for any message on the queue and processes the transaction with charge function.
+    The charge waits for 100ms and processes the request, that is, updates the status of the transaction from ```pending```
+    to ```success```
 
 ## SEED THE DATABASE BEFORE TESTING
 
